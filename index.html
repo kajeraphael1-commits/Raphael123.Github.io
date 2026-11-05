@@ -3,88 +3,215 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A teacher's personal website about education, teaching resources and Christian inspiration.">
-<title>My Personal Website | Teacher</title>
+<title>Raphael Elia Kaje | Personal Website</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-html{scroll-behavior:smooth}
-body{background:#f5f7f5;color:#26332d;line-height:1.65}
-header{background:#064e3b;color:white;text-align:center;padding:28px 16px}
-header h1{font-size:clamp(1.7rem,5vw,2.3rem)}
-nav{background:#022c22;padding:14px 10px;text-align:center;position:sticky;top:0;z-index:5}
-nav a{display:inline-block;color:white;text-decoration:none;margin:5px 10px;font-weight:bold}
-nav a:hover{color:#facc15}
-.hero{background:linear-gradient(135deg,#064e3b,#15803d);color:white;text-align:center;padding:78px 20px}
-.hero h2{font-size:clamp(2rem,6vw,2.8rem);margin-bottom:14px}
-.hero p{font-size:1.1rem;max-width:700px;margin:0 auto}
-.hero button,.button{display:inline-block;margin-top:24px;background:#facc15;color:#183326;border:0;padding:12px 24px;border-radius:7px;font-weight:bold;text-decoration:none;cursor:pointer}
-section{padding:46px 18px;max-width:960px;margin:auto}
-section h2{text-align:center;color:#064e3b;margin-bottom:22px;font-size:1.8rem}
-.card{background:white;padding:25px;margin:15px 0;border-radius:12px;box-shadow:0 3px 12px #00000012}
-.card h3{color:#15803d;margin-bottom:8px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
-.grid .card{margin:0}
-blockquote{border-left:4px solid #d4a900;padding:12px 18px;background:#fffdf2;margin:12px 0;font-style:italic}
-footer{background:#022c22;color:white;text-align:center;padding:25px 15px}
-@media(max-width:480px){nav a{margin:4px 7px;font-size:.92rem}.hero{padding:60px 18px}}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+  color: #222;
+  line-height: 1.7;
+}
+
+header {
+  background: #102542;
+  color: white;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+header h1 {
+  color: #e5bd62;
+  font-size: 30px;
+}
+
+nav {
+  background: #17375e;
+  text-align: center;
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.hero {
+  background: linear-gradient(135deg,#102542,#24476d);
+  color: white;
+  text-align: center;
+  padding: 45px 15px;
+}
+
+.hero img {
+  width: 175px;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #e5bd62;
+  margin-bottom: 15px;
+}
+
+.hero h2 {
+  color: #f2ce77;
+  font-size: 28px;
+}
+
+.hero p {
+  margin: 8px;
+}
+
+section {
+  max-width: 950px;
+  margin: 25px auto;
+  padding: 30px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #00000012;
+}
+
+section h2 {
+  color: #102542;
+  border-bottom: 3px solid #e5bd62;
+  display: inline-block;
+  margin-bottom: 18px;
+}
+
+.info {
+  margin: 10px 0;
+}
+
+.resource {
+  background: #f0f3f8;
+  padding: 15px;
+  margin: 12px 0;
+  border-left: 4px solid #d4a93e;
+  border-radius: 5px;
+}
+
+.contact {
+  text-align: center;
+}
+
+.whatsapp {
+  display: inline-block;
+  background: #168c4b;
+  color: white;
+  padding: 13px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+footer {
+  background: #102542;
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+}
+
+footer span {
+  color: #e5bd62;
+}
 </style>
 </head>
+
 <body>
+
 <header>
-  <h1>Kaje's Website</h1>
-  <p>Teacher | Educator | Christian</p>
+  <h1>KAJE'S WEBSITE</h1>
+  <p>Faith • Education • Excellence</p>
 </header>
-<nav aria-label="Main navigation">
-  <a href="#home">Home</a><a href="#about">About</a><a href="#teaching">Teaching</a><a href="#faith">Faith</a><a href="#contact">Contact</a>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#resources">CRE</a>
+  <a href="#contact">Contact</a>
 </nav>
-<main>
-  <div class="hero" id="home">
 
-    <img src="IMG_20261105_175611.png"
-alt="Raphael Elia Kaje"
-style="width:160px;height:160px;border-radius:50%;object-fit:cover;">
+<div class="hero" id="home">
+  <img src="IMG_20261105_175611.png"
+       alt="Raphael Elia Kaje">
 
-    <h2>Welcome to My Website</h2>
-    <p>Inspiring minds, building character and transforming lives through education.</p>
-    <a class="button" href="#about">Learn More</a>
+  <h2>Raphael Elia Kaje</h2>
+  <p>Professional Teacher | Christian Educator</p>
+  <p>Welcome to my personal website!</p>
+  <p>Committed to academic excellence and moral values.</p>
+</div>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    Welcome to my personal website. I am Raphael Elia Kaje,
+    a dedicated teacher committed to educating, inspiring
+    and guiding learners towards a bright future.
+  </p>
+  <p>
+    My passion is promoting quality education, Christian
+    values, discipline and good morals.
+  </p>
+</section>
+
+<section id="education">
+  <h2>Education & Profession</h2>
+  <div class="info"><b>Name:</b> Raphael Elia Kaje</div>
+  <div class="info"><b>Profession:</b> Teacher</div>
+  <div class="info"><b>School:</b> New Light School</div>
+  <div class="info"><b>Qualification:</b> Diploma</div>
+  <div class="info"><b>Teaching Subject:</b> CRE</div>
+</section>
+
+<section id="resources">
+  <h2>CRE Learning Resources</h2>
+  <div class="resource">
+    <h3>CRE Notes</h3>
+    <p>Learning materials for Christian Religious Education.</p>
   </div>
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="card">
-      <h3>Who Am I?</h3>
-      <p>Welcome to my personal website. I am a dedicated teacher with a passion for educating learners, developing talents and building good morals.</p>
-      <p>My mission is to help learners achieve academic excellence while growing in discipline, wisdom and Christian values.</p>
-    </div>
-  </section>
-  <section id="teaching">
-    <h2>My Teaching Services</h2>
-    <div class="grid">
-      <div class="card"><h3>Teaching and Learning</h3><p>Supporting learners to achieve their academic goals.</p></div>
-      <div class="card"><h3>Educational Resources</h3><p>Preparing examinations, notes, assignments and worksheets.</p></div>
-      <div class="card"><h3>Guidance and Counselling</h3><p>Encouraging discipline, confidence and good behaviour.</p></div>
-    </div>
-  </section>
-  <section id="faith">
-    <h2>Christian Inspiration</h2>
-    <div class="card">
-      <h3>My Favourite Bible Verse</h3>
-      <blockquote>“I can do all things through Christ which strengtheneth me.”</blockquote>
-      <p><strong>Philippians 4:13</strong></p>
-    </div>
-    <div class="card"><h3>My Motto</h3><p>Education with Excellence, Character and Faith.</p></div>
-  </section>
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="card">
-      <p>Thank you for visiting my website. To add working email or WhatsApp contact, update this section with your preferred contact details.</p>
-      <p><strong>Email:</strong> kajeraphael1@gmail.com</p>
-      <p><strong>Phone / WhatsApp:</strong> 0763555527</p>
-    </div>
-  </section>
-</main>
+  <div class="resource">
+    <h3>CRE Examinations</h3>
+    <p>Practice questions, tests and examinations for learners.</p>
+  </div>
+  <div class="resource">
+    <h3>Biblical Teachings</h3>
+    <p>Learning about the Bible, Christian values and good morals.</p>
+  </div>
+</section>
+
+<section>
+  <h2>My Favourite Bible Verse</h2>
+  <p>
+    "I can do all things through Christ which strengtheneth me."
+  </p>
+  <p><b>Philippians 4:13 (KJV)</b></p>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact Me</h2>
+  <p><b>Phone:</b> 0763555527</p>
+  <p><b>Email:</b> kajeraphael1@gmail.com</p>
+
+  <a class="whatsapp"
+     href="https://wa.me/255763555527">
+     Chat with me on WhatsApp
+  </a>
+</section>
+
 <footer>
-  <p>© 2026 Kaje's Website</p>
-  <p>Designed with Faith, Excellence and Purpose.</p>
+  <p>© 2026 Raphael Elia Kaje</p>
+  <p><span>Academics & Morals Excellence</span></p>
+  <p>All Rights Reserved.</p>
 </footer>
+
 </body>
 </html>
