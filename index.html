@@ -354,7 +354,35 @@ footer span {
 <div class="hero" id="home">
 
   <h2>Raphael Elia Kaje</h2>
+  
+<script>
+const photos = [
+  "107 (2) 1.jpg",
+  "57 2.jpg",
+  "99 3.jpg"
+];
 
+let currentPhoto = 0;
+
+function showPhoto() {
+  document.getElementById("slide").src =
+    photos[currentPhoto];
+}
+
+function nextPhoto() {
+  currentPhoto = (currentPhoto + 1) % photos.length;
+  showPhoto();
+}
+
+function previousPhoto() {
+  currentPhoto =
+    (currentPhoto - 1 + photos.length) % photos.length;
+  showPhoto();
+}
+
+setInterval(nextPhoto, 4000);
+</script>
+</body>
   <p>Professional Teacher | Christian Educator</p>
 
   <p class="welcome">
