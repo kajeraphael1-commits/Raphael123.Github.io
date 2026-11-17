@@ -338,6 +338,36 @@ footer span {
 </style>
 </head>
 
+<script>
+const photos = [
+  "99% 1.jpg",
+  "IMG_20261105_175611.png",
+  "IMG-20260324-WA0011.jpg"
+];
+
+let currentPhoto = 0;
+
+function showPhoto() {
+  document.getElementById("slide").src =
+    photos[currentPhoto];
+}
+
+function nextPhoto() {
+  currentPhoto = (currentPhoto + 1) % photos.length;
+  showPhoto();
+}
+
+function previousPhoto() {
+  currentPhoto =
+    (currentPhoto - 1 + photos.length) % photos.length;
+  showPhoto();
+}
+
+// Automatically change photos every 4 seconds
+setInterval(nextPhoto, 4000);
+</script>
+</body>
+
 <body>
 
 <header>
