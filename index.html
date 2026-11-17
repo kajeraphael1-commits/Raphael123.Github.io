@@ -1,100 +1,205 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Raphael Elia Kaje | Personal Website</title>
 
 <style>
+:root {
+  --navy: #102542;
+  --blue: #193b63;
+  --gold: #e5bd62;
+  --light: #f4f6fa;
+  --white: #ffffff;
+  --text: #263449;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background: #f5f6fa;
-  color: #222;
+  background: var(--light);
+  color: var(--text);
   line-height: 1.7;
 }
 
 header {
-  background: #102542;
+  background: var(--navy);
   color: white;
-  padding: 25px 15px;
   text-align: center;
+  padding: 28px 15px;
 }
 
 header h1 {
-  color: #e5bd62;
+  color: var(--gold);
   font-size: 30px;
+  letter-spacing: 2px;
+}
+
+header p {
+  margin-top: 5px;
+  letter-spacing: 1px;
 }
 
 nav {
-  background: #17375e;
+  background: var(--blue);
+  padding: 15px 10px;
   text-align: center;
-  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 10px;
+  display: inline-block;
+  margin: 5px 12px;
   font-weight: bold;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: var(--gold);
 }
 
 .hero {
-  background: linear-gradient(135deg,#102542,#24476d);
+  background: linear-gradient(135deg, #102542, #31577d);
   color: white;
   text-align: center;
-  padding: 45px 15px;
+  padding: 65px 20px;
 }
 
 .hero img {
-  width: 175px;
-  height: 175px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border-radius: 50%;
-  border: 5px solid #e5bd62;
-  margin-bottom: 15px;
+  border: 5px solid var(--gold);
+  margin-bottom: 18px;
+  box-shadow: 0 8px 25px #0005;
 }
 
 .hero h2 {
-  color: #f2ce77;
-  font-size: 28px;
+  color: var(--gold);
+  font-size: 32px;
+  margin-bottom: 8px;
 }
 
 .hero p {
-  margin: 8px;
+  margin: 5px;
+}
+
+.hero .welcome {
+  margin-top: 15px;
+  font-size: 17px;
 }
 
 section {
-  max-width: 950px;
-  margin: 25px auto;
-  padding: 30px 20px;
+  max-width: 1050px;
+  margin: 30px auto;
+  padding: 35px 25px;
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 3px 12px #00000012;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px #10254212;
 }
 
 section h2 {
-  color: #102542;
-  border-bottom: 3px solid #e5bd62;
+  color: var(--navy);
   display: inline-block;
-  margin-bottom: 18px;
+  border-bottom: 3px solid var(--gold);
+  padding-bottom: 7px;
+  margin-bottom: 22px;
+}
+
+section p {
+  margin-bottom: 12px;
 }
 
 .info {
-  margin: 10px 0;
+  padding: 9px 12px;
+  margin: 8px 0;
+  background: #f4f6fa;
+  border-radius: 7px;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
 }
 
 .resource {
-  background: #f0f3f8;
-  padding: 15px;
-  margin: 12px 0;
-  border-left: 4px solid #d4a93e;
-  border-radius: 5px;
+  background: #f5f7fb;
+  padding: 22px;
+  border-radius: 12px;
+  border-top: 4px solid var(--gold);
+  box-shadow: 0 3px 12px #1025420c;
+}
+
+.resource h3 {
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.resource h4 {
+  color: #8a6720;
+  margin-bottom: 10px;
+}
+
+.resource p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.resource a {
+  display: inline-block;
+  background: var(--navy);
+  color: white;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 7px;
+  margin: 5px 3px 0 0;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.resource a:hover {
+  background: #31577d;
+}
+
+.verse {
+  text-align: center;
+  background: linear-gradient(135deg, #102542, #24476d);
+  color: white;
+}
+
+.verse h2 {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+.verse blockquote {
+  font-size: 21px;
+  font-style: italic;
+  margin: 15px auto;
+  max-width: 700px;
+}
+
+.verse strong {
+  color: var(--gold);
 }
 
 .contact {
@@ -112,15 +217,53 @@ section h2 {
   font-weight: bold;
 }
 
+.whatsapp:hover {
+  background: #116d3b;
+}
+
 footer {
-  background: #102542;
+  background: var(--navy);
   color: white;
   text-align: center;
-  padding: 25px 10px;
+  padding: 30px 15px;
+  margin-top: 35px;
 }
 
 footer span {
-  color: #e5bd62;
+  color: var(--gold);
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav {
+    padding: 10px 5px;
+  }
+
+  nav a {
+    margin: 5px 7px;
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 45px 15px;
+  }
+
+  .hero h2 {
+    font-size: 26px;
+  }
+
+  section {
+    margin: 18px 12px;
+    padding: 25px 18px;
+  }
+
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 </head>
@@ -136,7 +279,8 @@ footer span {
   <a href="#home">Home</a>
   <a href="#about">About</a>
   <a href="#education">Education</a>
-  <a href="#resources">CRE</a>
+  <a href="#resources">CRE Resources</a>
+  <a href="#teachings">Bible Teachings</a>
   <a href="#contact">Contact</a>
 </nav>
 
@@ -146,17 +290,23 @@ footer span {
 
   <h2>Raphael Elia Kaje</h2>
   <p>Professional Teacher | Christian Educator</p>
-  <p>Welcome to my personal website!</p>
+
+  <p class="welcome">
+    Welcome to my personal website!
+  </p>
+
   <p>Committed to academic excellence and moral values.</p>
 </div>
 
 <section id="about">
   <h2>About Me</h2>
+
   <p>
     Welcome to my personal website. I am Raphael Elia Kaje,
     a dedicated teacher committed to educating, inspiring
     and guiding learners towards a bright future.
   </p>
+
   <p>
     My passion is promoting quality education, Christian
     values, discipline and good morals.
@@ -165,6 +315,7 @@ footer span {
 
 <section id="education">
   <h2>Education & Profession</h2>
+
   <div class="info"><b>Name:</b> Raphael Elia Kaje</div>
   <div class="info"><b>Profession:</b> Teacher</div>
   <div class="info"><b>School:</b> New Light</div>
@@ -174,116 +325,130 @@ footer span {
 
 <section id="resources">
   <h2>CRE Learning Resources</h2>
-  <div class="resource">
-    <h3>CRE Notes</h3>
-    <p>Learning materials for Christian Religious Education.</p>
+
+  <p>Learning materials for Christian Religious Education.</p>
+
+  <div class="resource-grid">
+
+    <div class="resource">
+      <h3>CRE Standard 4 – Family</h3>
+      <p>Learning notes and practice examination questions about The Family.</p>
+
+      <a href="CRE_Standard_4_Family_Learning_Pack.pdf"
+         target="_blank" rel="noopener">
+        Read Notes
+      </a>
+
+      <a href="CRE_Standard_4_Family_Learning_Pack.pdf" download>
+        Download PDF
+      </a>
+    </div>
+
+    <div class="resource">
+      <h3>CRE Standard 4 – Additional Notes</h3>
+      <p>Topics: God the Creator, The Bible, Prayer and Jesus Christ.</p>
+
+      <a href="CRE_Standard_4_Additional_Notes.pdf"
+         target="_blank" rel="noopener">
+        Read Notes
+      </a>
+
+      <a href="CRE_Standard_4_Additional_Notes.pdf" download>
+        Download PDF
+      </a>
+    </div>
+
+    <div class="resource">
+      <h3>CRE Examinations</h3>
+      <p>Practice questions, tests and examinations for learners.</p>
+    </div>
+
   </div>
-<div class="resource">
-  
-  <p>Learning notes and practice examination questions about The Family.</p>
-
-  <a href="CRE_Standard_4_Family_Learning_Pack.pdf"
-     target="_blank">
-     Read Notes on Website 
-  </a>
-
-  <br><br>
-
-  <a href="CRE_Standard_4_Family_Learning_Pack.pdf" download>
-     Download Family Learning Pack
-  </a>
-</div>
-  <h3>CRE Standard 4 – Additional Notes</h3>
-  <p>Topics: God the Creator, The Bible, Prayer and Jesus Christ.</p>
-
-  <a href="CRE_Standard_4_Additional_Notes.pdf"
-     target="_blank">
-     Read Notes on Website
-  </a>
-
-  <br><br>
-
-  <a href="CRE_Standard_4_Additional_Notes.pdf" download>
-     Download Additional CRE Notes
-  </a>
-</div>
-</div>
-
-    <h3>CRE Examinations</h3>
-    <p>Practice questions, tests and examinations for learners.</p>
-  </div>
-  <div class="resource">
-    <h3>Biblical Teachings</h3>
-    <p>Learning about the Bible, Christian values and good morals.</p>
-  </div>
-<div class="teaching-card">
-  <h3>🇬🇧 Assurance of Salvation</h3>
-  <p>English Bible Teaching Notes</p>
-
-  <a href="Assurance_of_Salvation_Teaching_Notes.pdf"
-     target="_blank" rel="noopener">
-     📖 Read Online
-  </a>
-
-  <a href="Assurance_of_Salvation_Teaching_Notes.pdf"
-     download>
-     ⬇️ Download PDF
-  </a>
-</div>
-<div class="teaching-card">
-  <h3>🇹🇿 Hakika ya Wokovu</h3>
-  <p>Mafundisho ya Biblia kwa Kiswahili</p>
-
-  <a href="Hakika_ya_Wokovu_Mafundisho.pdf"
-     target="_blank" rel="noopener">
-     📖 Soma Mtandaoni
-  </a>
-
-  <a href="Hakika_ya_Wokovu_Mafundisho.pdf"
-     download>
-     ⬇️ Pakua PDF
-  </a>
-</div>
-  <div class="resource">
-  <h3>Toba na Maungamo ya Kweli</h3>
-  <h4>True Repentance and Confession</h4>
-
-  <p>Somo la Kikristo kwa Kiswahili na Kiingereza.</p>
-
-  <a href="Toba_na_Maungamo_ya_Kweli_Bilingual-1.pdf"
-     target="_blank">
-     Read Lesson / Soma Somo
-  </a>
-
-  <br><br>
-
-  <a href="Toba_na_Maungamo_ya_Kweli_Bilingual-1.pdf" download>
-     Download Lesson
-  </a>
-</div>
 </section>
-<section>
-  <h2>My Favourite Bible Verse</h2>
+
+<section id="teachings">
+  <h2>Bible Teachings</h2>
+
   <p>
-    "I can do all things through Christ which strengtheneth me."
+    Christian teachings, biblical lessons and spiritual
+    guidance in Swahili and English.
   </p>
-  <p><b>Philippians 4:13 (KJV)</b></p>
+
+  <div class="resource-grid">
+
+    <div class="resource">
+      <h3>Assurance of Salvation</h3>
+      <p>English Bible Teaching Notes.</p>
+
+      <a href="Assurance_of_Salvation_Teaching_Notes.pdf"
+         target="_blank" rel="noopener">
+        Read Online
+      </a>
+
+      <a href="Assurance_of_Salvation_Teaching_Notes.pdf" download>
+        Download PDF
+      </a>
+    </div>
+
+    <div class="resource">
+      <h3>Hakika ya Wokovu</h3>
+      <p>Mafundisho ya Biblia kwa Kiswahili.</p>
+
+      <a href="Hakika_ya_Wokovu_Mafundisho.pdf"
+         target="_blank" rel="noopener">
+        Soma Mtandaoni
+      </a>
+
+      <a href="Hakika_ya_Wokovu_Mafundisho.pdf" download>
+        Pakua PDF
+      </a>
+    </div>
+
+    <div class="resource">
+      <h3>Toba na Maungamo ya Kweli</h3>
+      <h4>True Repentance and Confession</h4>
+
+      <p>Somo la Kikristo kwa Kiswahili na Kiingereza.</p>
+
+      <a href="Toba_na_Maungamo_ya_Kweli_Bilingual-1.pdf"
+         target="_blank" rel="noopener">
+        Read Lesson / Soma Somo
+      </a>
+
+      <a href="Toba_na_Maungamo_ya_Kweli_Bilingual-1.pdf" download>
+        Download PDF
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="verse">
+  <h2>My Favourite Bible Verse</h2>
+
+  <blockquote>
+    "I can do all things through Christ which strengtheneth me."
+  </blockquote>
+
+  <strong>Philippians 4:13 (KJV)</strong>
 </section>
 
 <section id="contact" class="contact">
   <h2>Contact Me</h2>
+
   <p><b>Phone:</b> 0763555527</p>
   <p><b>Email:</b> kajeraphael1@gmail.com</p>
 
   <a class="whatsapp"
-     href="https://wa.me/255763555527">
-     Chat with me on WhatsApp
+     href="https://wa.me/255763555527"
+     target="_blank" rel="noopener">
+    Chat with me on WhatsApp
   </a>
 </section>
 
 <footer>
   <p>© 2026 Raphael Elia Kaje</p>
-  <p><span>Academics & Morals Excellence</span></p>
+  <p><span>Academic & Moral Excellence</span></p>
   <p>All Rights Reserved.</p>
 </footer>
 
