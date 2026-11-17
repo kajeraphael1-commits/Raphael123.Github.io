@@ -1,1 +1,661 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Raphael Elia Kaje | Personal Website</title>
+
+<style>
+:root {
+  --navy: #102542;
+  --blue: #193b63;
+  --gold: #e5bd62;
+  --light: #f4f6fa;
+  --white: #ffffff;
+  --text: #263449;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* HEADER */
+
+header {
+  background: var(--navy);
+  color: white;
+  text-align: center;
+  padding: 28px 15px;
+}
+
+header h1 {
+  color: var(--gold);
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+/* NAVIGATION */
+
+nav {
+  background: var(--blue);
+  padding: 15px 10px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px 12px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+/* HERO */
+
+.hero {
+  background: linear-gradient(135deg, #102542, #31577d);
+  color: white;
+  text-align: center;
+  padding: 55px 20px;
+}
+
+.hero h2 {
+  color: var(--gold);
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.hero .welcome {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+/* PHOTO ANIMATION */
+
+.slideshow {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 4px solid var(--gold);
+  box-shadow: 0 8px 25px #0005;
+}
+
+.slideshow img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  animation: photoFloat 4s ease-in-out infinite,
+             photoGlow 3s ease-in-out infinite alternate;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes photoFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes photoGlow {
+  from {
+    box-shadow: 0 0 10px #e5bd62;
+  }
+  to {
+    box-shadow: 0 0 30px #e5bd62,
+                0 0 45px #e5bd62;
+  }
+}
+
+/* SLIDESHOW BUTTONS */
+
+.slide-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 12px;
+}
+
+.slide-controls button {
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.slide-controls button:hover {
+  background: white;
+}
+
+#slideCounter {
+  margin-top: 10px;
+  color: var(--gold);
+  font-weight: bold;
+}
+
+/* SECTIONS */
+
+section {
+  max-width: 1050px;
+  margin: 30px auto;
+  padding: 35px 25px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px #10254212;
+}
+
+section h2 {
+  color: var(--navy);
+  display: inline-block;
+  border-bottom: 3px solid var(--gold);
+  padding-bottom: 7px;
+  margin-bottom: 22px;
+}
+
+section p {
+  margin-bottom: 12px;
+}
+
+.info {
+  padding: 9px 12px;
+  margin: 8px 0;
+  background: var(--light);
+  border-radius: 7px;
+}
+
+/* RESOURCES */
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.resource {
+  background: #f5f7fb;
+  padding: 22px;
+  border-radius: 12px;
+  border-top: 4px solid var(--gold);
+  box-shadow: 0 3px 12px #1025420c;
+}
+
+.resource h3 {
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.resource h4 {
+  color: #8a6720;
+  margin-bottom: 10px;
+}
+
+.resource p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.resource a {
+  display: inline-block;
+  background: var(--navy);
+  color: white;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 7px;
+  margin: 5px 3px 0 0;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.resource a:hover {
+  background: #31577d;
+}
+
+/* BIBLE VERSE */
+
+.verse {
+  text-align: center;
+  background: linear-gradient(135deg, #102542, #24476d);
+  color: white;
+}
+
+.verse h2 {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+.verse blockquote {
+  font-size: 21px;
+  font-style: italic;
+  margin: 15px auto;
+  max-width: 700px;
+}
+
+.verse strong {
+  color: var(--gold);
+}
+
+/* CONTACT */
+
+.contact {
+  text-align: center;
+}
+
+.whatsapp {
+  display: inline-block;
+  background: #168c4b;
+  color: white;
+  padding: 13px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.whatsapp:hover {
+  background: #116d3b;
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--navy);
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+  margin-top: 35px;
+}
+
+footer span {
+  color: var(--gold);
+  font-weight: bold;
+}
+
+/* MOBILE DESIGN */
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav {
+    padding: 10px 5px;
+  }
+
+  nav a {
+    margin: 5px 7px;
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero h2 {
+    font-size: 26px;
+  }
+
+  section {
+    margin: 18px 12px;
+    padding: 25px 18px;
+  }
+
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .slideshow img {
+    height: 280px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>KAJE'S WEBSITE</h1>
+  <p>Faith • Education • Excellence</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#resources">CRE Resources</a>
+  <a href="#teachings">Bible Teachings</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- HOME AND SLIDESHOW -->
+
+<div class="hero" id="home">
+
+  <h2>Raphael Elia Kaje</h2>
+
+  <p>Professional Teacher | Christian Educator</p>
+
+  <p class="welcome">
+    Welcome to my personal website!
+  </p>
+
+  <p>Committed to academic excellence and moral values.</p>
+
+  <div class="slideshow">
+    <img id="slide"
+         src="107%20(2)%201.jpg"
+         alt="Raphael Elia Kaje Photo">
+  </div>
+
+  <div class="slide-controls">
+    <button onclick="previousPhoto()">❮ Previous</button>
+    <button onclick="nextPhoto()">Next ❯</button>
+  </div>
+
+  <p id="slideCounter">Photo 1 of 3</p>
+
+</div>
+
+<!-- ABOUT ME -->
+
+<section id="about">
+
+  <h2>About Me</h2>
+
+  <p>
+    Welcome to my personal website. Grace and peace to you
+    in the name of our Lord Jesus Christ!
+  </p>
+
+  <p>
+    I am Raphael Elia Kaje, a dedicated teacher committed
+    to educating, inspiring and guiding learners towards
+    a bright future.
+  </p>
+
+  <p>
+    This website is created to provide a platform for
+    learning, spiritual growth, and sharing valuable
+    educational resources.
+  </p>
+
+  <p>
+    Explore our CRE learning resources, Bible teachings,
+    Christian messages, and reading materials.
+  </p>
+
+  <p>
+    May every visitor grow in knowledge, strengthen their
+    faith, and find encouragement in God's Word.
+  </p>
+
+  <h3 style="color:#d4af37; margin-top:20px;">
+    WELCOME, AND GOD BLESS YOU!
+  </h3>
+
+  <p>
+    <em>
+      "Your word is a lamp to my feet and a light to my path."
+      – Psalm 119:105
+    </em>
+  </p>
+
+  <p>
+    My passion is promoting quality education, Christian
+    values, discipline and good morals.
+  </p>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+  <h2>Education & Profession</h2>
+
+  <div class="info"><b>Name:</b> Raphael Elia Kaje</div>
+  <div class="info"><b>Profession:</b> Teacher</div>
+  <div class="info"><b>School:</b> New Light</div>
+  <div class="info"><b>Qualification:</b> Diploma</div>
+  <div class="info"><b>Teaching Subject:</b> CRE</div>
+
+</section>
+
+<!-- CRE RESOURCES -->
+
+<section id="resources">
+
+  <h2>CRE Learning Resources</h2>
+
+  <p>Learning materials for Christian Religious Education.</p>
+
+  <div class="resource-grid">
+
+    <div class="resource">
+      <h3>CRE Standard 4 – Family</h3>
+
+      <p>
+        Learning notes and practice examination questions
+        about The Family.
+      </p>
+
+      <a href="CRE_Standard_4_Family_Learning_Pack.pdf"
+         target="_blank" rel="noopener">
+        Read Notes
+      </a>
+
+      <a href="CRE_Standard_4_Family_Learning_Pack.pdf" download>
+        Download PDF
+      </a>
+    </div>
+
+    <div class="resource">
+      <h3>CRE Standard 4 – Additional Notes</h3>
+
+      <p>
+        Topics: God the Creator, The Bible, Prayer and Jesus Christ.
+      </p>
+
+      <a href="CRE_Standard_4_Additional_Notes.pdf"
+         target="_blank" rel="noopener">
+        Read Notes
+      </a>
+
+      <a href="CRE_Standard_4_Additional_Notes.pdf" download>
+        Download PDF
+      </a>
+    </div>
+
+    <div class="resource">
+      <h3>CRE Examinations</h3>
+
+      <p>
+        Practice questions, tests and examinations for learners.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- BIBLE TEACHINGS -->
+
+<section id="teachings">
+
+  <h2>Bible Teachings</h2>
+
+  <p>
+    Christian teachings, biblical lessons and spiritual
+    guidance in Swahili and English.
+  </p>
+
+  <div class="resource-grid">
+
+    <div class="resource">
+      <h3>Assurance of Salvation</h3>
+
+      <p>English Bible Teaching Notes.</p>
+
+      <a href="Assurance_of_Salvation_Teaching_Notes.pdf"
+         target="_blank" rel="noopener">
+        Read Online
+      </a>
+
+      <a href="Assurance_of_Salvation_Teaching_Notes.pdf" download>
+        Download PDF
+      </a>
+    </div>
+
+    <div class="resource">
+      <h3>Hakika ya Wokovu</h3>
+
+      <p>Mafundisho ya Biblia kwa Kiswahili.</p>
+
+      <a href="Hakika_ya_Wokovu_Mafundisho.pdf"
+         target="_blank" rel="noopener">
+        Soma Mtandaoni
+      </a>
+
+      <a href="Hakika_ya_Wokovu_Mafundisho.pdf" download>
+        Pakua PDF
+      </a>
+    </div>
+
+    <div class="resource">
+      <h3>Toba na Maungamo ya Kweli</h3>
+
+      <h4>True Repentance and Confession</h4>
+
+      <p>Somo la Kikristo kwa Kiswahili na Kiingereza.</p>
+
+      <a href="Toba_na_Maungamo_ya_Kweli_Bilingual-1.pdf"
+         target="_blank" rel="noopener">
+        Read Lesson / Soma Somo
+      </a>
+
+      <a href="Toba_na_Maungamo_ya_Kweli_Bilingual-1.pdf" download>
+        Download PDF
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAVOURITE VERSE -->
+
+<section class="verse">
+
+  <h2>My Favourite Bible Verse</h2>
+
+  <blockquote>
+    "I can do all things through Christ which strengtheneth me."
+  </blockquote>
+
+  <strong>Philippians 4:13 (KJV)</strong>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+  <h2>Contact Me</h2>
+
+  <p><b>Phone:</b> 0763555527</p>
+  <p><b>Email:</b> kajeraphael1@gmail.com</p>
+
+  <a class="whatsapp"
+     href="https://wa.me/255763555527"
+     target="_blank" rel="noopener">
+    Chat with me on WhatsApp
+  </a>
+
+</section>
+
+<footer>
+
+  <p>© 2026 Raphael Elia Kaje</p>
+
+  <p><span>Academic & Moral Excellence</span></p>
+
+  <p>All Rights Reserved.</p>
+
+</footer>
+
+<!-- ONE SLIDESHOW SCRIPT -->
+
+<script>
+
+const photos = [
+  "107%20(2)%201.jpg",
+  "57%202.jpg",
+  "99%203.jpg"
+];
+
+let currentPhoto = 0;
+
+const slide = document.getElementById("slide");
+const counter = document.getElementById("slideCounter");
+
+function showPhoto(index) {
+
+  currentPhoto = (index + photos.length) % photos.length;
+
+  slide.style.opacity = "0";
+
+  setTimeout(function() {
+
+    slide.src = photos[currentPhoto];
+
+    counter.textContent =
+      "Photo " + (currentPhoto + 1) + " of " + photos.length;
+
+    slide.style.opacity = "1";
+
+  }, 500);
+}
+
+function nextPhoto() {
+  showPhoto(currentPhoto + 1);
+}
+
+function previousPhoto() {
+  showPhoto(currentPhoto - 1);
+}
+
+setInterval(nextPhoto, 4000);
+
+</script>
+
+</body>
+</html>
