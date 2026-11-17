@@ -286,6 +286,49 @@ footer span {
 <div class="hero" id="home">
   <img src="IMG_20261105_175611.png"
        alt="Raphael Elia Kaje">
+  
+<div class="slideshow">
+  <img id="slide" src="photo1.jpg" alt="My photos">
+</div>
+
+<style>
+.slideshow {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.slideshow img {
+  width: 100%;
+  display: block;
+  transition: opacity 1s ease;
+}
+</style>
+
+<script>
+const photos = [
+  "photo1.jpg",
+  "photo2.jpg",
+  "photo3.jpg"
+];
+
+let current = 0;
+
+setInterval(() => {
+  const slide = document.getElementById("slide");
+  slide.style.opacity = 0;
+
+  setTimeout(() => {
+    current = (current + 1) % photos.length;
+    slide.src = photos[current];
+    slide.style.opacity = 1;
+  }, 1000);
+
+}, 3000);
+</script>
+
 
   <h2>Raphael Elia Kaje</h2>
   <p>Professional Teacher | Christian Educator</p>
