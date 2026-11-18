@@ -650,20 +650,26 @@ const counter = document.getElementById("slideCounter");
 function showPhoto(index) {
   currentPhoto = (index + photos.length) % photos.length;
 
-  slide.style.opacity = "0";
+  const newImage = new Image();
 
-  setTimeout(function() {
-    slide.src = photos[currentPhoto];
+  newImage.onload = function() {
+    slide.style.opacity = "0";
 
-    slide.onload = function() {
+    setTimeout(function() {
+      slide.src = newImage.src;
       slide.style.opacity = "1";
-    };
 
-    counter.textContent =
-      "Photo " + (currentPhoto + 1) +
-      " of " + photos.length;
+      counter.textContent =
+        "Photo " + (currentPhoto + 1) +
+        " of " + photos.length;
+    }, 500);
+  };
 
-  }, 500);
+  newImage.onerror = function() {
+    console.log("Cannot load photograph: " + photos[currentPhoto]);
+  };
+
+  newImage.src = photos[currentPhoto];
 }
 
 function nextPhoto() {
