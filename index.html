@@ -371,22 +371,48 @@ footer span {
   </p>
 
   <p>Committed to academic excellence and moral values.</p>
-
-  <div class="slideshow">
-    <img id="slide"
-         src="107%20(2)%201.jpg"
-         alt="Raphael Elia Kaje Photo">
-  </div>
-
-  <div class="slide-controls">
-    <button onclick="previousPhoto()">❮ Previous</button>
-    <button onclick="nextPhoto()">Next ❯</button>
-  </div>
-
-  <p id="slideCounter">Photo 1 of 3</p>
-
+  
+<div class="photo-container">
+  <img id="slideshow"
+       src="107%20(2)%201.jpg"
+       alt="Raphael Elia Kaje Photo">
 </div>
 
+<div class="photo-buttons">
+  <button onclick="previousPhoto()">❮ Previous</button>
+  <button onclick="nextPhoto()">Next ❯</button>
+</div>
+
+<p id="photo-counter">Photo 1 of 3</p>
+
+<script>
+const photos = [
+  "107%20(2)%201.jpg",
+  "57%202.jpg",
+  "99%203.jpg"
+];
+
+let currentPhoto = 0;
+
+function showPhoto() {
+  document.getElementById("slideshow").src =
+    photos[currentPhoto];
+
+  document.getElementById("photo-counter").textContent =
+    "Photo " + (currentPhoto + 1) + " of 3";
+}
+
+function nextPhoto() {
+  currentPhoto = (currentPhoto + 1) % photos.length;
+  showPhoto();
+}
+
+function previousPhoto() {
+  currentPhoto =
+    (currentPhoto - 1 + photos.length) % photos.length;
+  showPhoto();
+}
+</script>
 <!-- ABOUT ME -->
 
 <section id="about">
