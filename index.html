@@ -632,27 +632,28 @@ footer span {
 
 </footer>
 
-<!-- ONE SLIDESHOW SCRIPT -->
+<!-- ONE SLIDESHOW SCRIPT --
 
 <script>
 const photos = [
-  "photo1.jpg",
-  "photo2.jpg",
-  "photo3.jpg"
+  "107%20(2).jpg",
+  "57.jpg",
+  "99.jpg",
+  "IMG-20260324-WA0011.jpg",
+  "IMG_20261105_175611.png"
 ];
+
 let currentPhoto = 0;
 
 const slide = document.getElementById("slideshow");
 const counter = document.getElementById("slideCounter");
 
 function showPhoto(index) {
-
   currentPhoto = (index + photos.length) % photos.length;
 
   slide.style.opacity = "0";
 
   setTimeout(function() {
-
     slide.src = photos[currentPhoto];
 
     counter.textContent =
@@ -660,7 +661,6 @@ function showPhoto(index) {
       " of " + photos.length;
 
     slide.style.opacity = "1";
-
   }, 500);
 }
 
@@ -672,12 +672,9 @@ function previousPhoto() {
   showPhoto(currentPhoto - 1);
 }
 
-// Automatically change photos every four seconds
-
 setInterval(function() {
   nextPhoto();
 }, 4000);
-
 </script>
 
 </body>
