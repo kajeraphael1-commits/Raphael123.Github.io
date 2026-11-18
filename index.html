@@ -656,11 +656,14 @@ function showPhoto(index) {
   setTimeout(function() {
     slide.src = photos[currentPhoto];
 
+    slide.onload = function() {
+      slide.style.opacity = "1";
+    };
+
     counter.textContent =
       "Photo " + (currentPhoto + 1) +
       " of " + photos.length;
 
-    slide.style.opacity = "1";
   }, 500);
 }
 
@@ -672,9 +675,9 @@ function previousPhoto() {
   showPhoto(currentPhoto - 1);
 }
 
-setInterval(function() {
-  nextPhoto();
-}, 4000);
+showPhoto(0);
+
+setInterval(nextPhoto, 4000);
 </script>
 
 </body>
